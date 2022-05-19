@@ -28,9 +28,18 @@ public class App {
         // enable()
         // focus()
         // setPosition()
+        
+        // Polymorphism
+        drawUIControl(new TextBox());
+        drawUIControl(new CheckBox());
     }
 
     public static TaxCalculator getCalculator() {
         return new TaxCalculator2019();
+    }
+
+    // Polymorphism
+    public static void drawUIControl(UIControl control) {
+        control.draw();
     }
 }
