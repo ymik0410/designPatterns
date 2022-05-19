@@ -4,6 +4,10 @@ public class App {
         user.sayHello();
         TaxCalculator calculator = getCalculator();
         calculator.calculateTax();
+        Account account = new Account();
+        account.deposit(10);
+        account.withdraw(5);
+        System.out.println(account.getBalance());
     }
 
     public static TaxCalculator getCalculator() {
