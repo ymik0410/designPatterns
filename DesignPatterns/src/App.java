@@ -18,6 +18,16 @@ public class App {
         MailService mailService = new MailService();
         mailService.sendEmail(); // we added a parameter to connect method, but do not need any changes here
 
+        // Inheritance
+
+        // TextBox
+        TextBox textBox = new TextBox();
+        textBox.enable();
+        // Button
+        // CheckBox 
+        // enable()
+        // focus()
+        // setPosition()
     }
 
     public static TaxCalculator getCalculator() {
