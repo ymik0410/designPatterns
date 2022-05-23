@@ -1,6 +1,7 @@
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
+    private float heatindex;
     private WeatherData weatherData;
 
     public CurrentConditionsDisplay(WeatherData weatherData) {
@@ -22,15 +23,15 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
         return heatindex;
     }
 
-    public void update(float temperature, float humidity, float pressure) {
-        this.temperature = temperature;
-        this.humidity = humidity;
-        float heatindex = computeHeatIndex(temperature, humidity);
+    public void update(float newTemperature, float newHumidity, float pressure) {
+        this.temperature = newTemperature;
+        this.humidity = newHumidity;
+        this.heatindex = computeHeatIndex(temperature, humidity);
         display();
     }
 
     public void display() {
         System.out.println("Current conditions: " + temperature + "F degrees and " + humidity + "% humidity");
-        // System.out.println("Heat index is: " + heatindex);
+        System.out.println("Heat index is: " + heatindex);
     }
 }
