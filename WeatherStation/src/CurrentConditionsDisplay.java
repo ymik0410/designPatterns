@@ -2,10 +2,10 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
     private float heatindex;
-    private WeatherData weatherData;
+    // private WeatherData weatherData;
 
     public CurrentConditionsDisplay(WeatherData weatherData) {
-        this.weatherData = weatherData;
+        // this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
 
