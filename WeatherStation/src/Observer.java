@@ -1,3 +1,4 @@
 public interface Observer {
-    public void update(float temp, float humidity, float pressure);
+    // 2. the update() has no parameter, not (float temperature, ...)
+    public void update();
 }

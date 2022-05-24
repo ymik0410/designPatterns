@@ -17,10 +17,11 @@ public class WeatherData implements Subject {
     public void removeObserver(Observer o) {
         observers.remove(o);
     }
-    
+    //Changes allowing the observers to pull the info they need
+    // 1) .update(float temperature, ...) -> .update()
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update(temperature, humidity, pressure);
+            observer.update();
         }
     }
 
@@ -33,5 +34,17 @@ public class WeatherData implements Subject {
         this.humidity = humidity;
         this.pressure = pressure;
         measurementsChanged();
+    }
+
+    public float getTemperature() {
+        return temperature;
+    }
+
+    public float getHumidity() {
+        return humidity;
+    }
+
+    public float getPressure() {
+        return pressure;
     }
 }

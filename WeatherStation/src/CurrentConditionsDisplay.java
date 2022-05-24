@@ -2,10 +2,10 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
     private float heatindex;
-    // private WeatherData weatherData;
+    private WeatherData weatherData;
 
     public CurrentConditionsDisplay(WeatherData weatherData) {
-        // this.weatherData = weatherData;
+        this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
 
@@ -23,9 +23,10 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
         return heatindex;
     }
 
-    public void update(float newTemperature, float newHumidity, float pressure) {
-        this.temperature = newTemperature;
-        this.humidity = newHumidity;
+    //3. we modify each concrete observer! update() and use the Subject's getter methods
+    public void update() {
+        this.temperature = weatherData.getTemperature();
+        this.humidity = weatherData.getHumidity();
         this.heatindex = computeHeatIndex(temperature, humidity);
         display();
     }
