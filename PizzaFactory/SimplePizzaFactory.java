@@ -1,3 +1,4 @@
+/* FIRST VERSION
 public class SimplePizzaFactory {
     
     // First we define a createPizza() method, that will be used by all clients to instantiate new objects 
@@ -16,3 +17,4 @@ public class SimplePizzaFactory {
         return pizza;
     }
 }
+*/

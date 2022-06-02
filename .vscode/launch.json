@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch PizzaTestDrive",
+            "request": "launch",
+            "mainClass": "PizzaTestDrive",
+            "projectName": "design-patterns_db848b59"
+        },
+        {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
